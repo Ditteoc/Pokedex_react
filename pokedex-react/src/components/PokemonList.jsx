@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import PokemonCard from "./PokemonCard";
-
+// pokelist
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
   const [currentUrl, setCurrentUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=20");
