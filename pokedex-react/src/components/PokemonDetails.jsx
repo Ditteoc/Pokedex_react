@@ -12,7 +12,15 @@ const PokemonDetails = ({ inlineData }) => {
   
         <div className="tw-grid">
           <div><h3 className="tw-label">Types:</h3><p>{pokemon.types.map(t => t.type.name).join(", ")}</p></div>
-          <div><h3 className="tw-label">Abilities:</h3><ul className="list-disc ml-4">{pokemon.abilities.map(a => (<li key={a.ability.name}>{a.ability.name}</li>))}</ul></div>
+          <div>
+            <h3 className="tw-label">Abilities:</h3>
+  <ul className="ml-4">
+    {pokemon.abilities.map((a) => (
+      <li key={a.ability.name} className="list-none">{a.ability.name}</li>
+    ))}
+  </ul>
+</div>
+
           <div><h3 className="tw-label">Height:</h3><p>{pokemon.height / 10} m</p></div>
           <div><h3 className="tw-label">Weight:</h3><p>{pokemon.weight / 10} kg</p></div>
           <div className="sm:col-span-2">
